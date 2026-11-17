@@ -140,7 +140,7 @@ class CourseListView(generic.ListView):
 # Course detail view
 class CourseDetailView(generic.DetailView):
     model = Course
-    template_name = 'onlinecourse/course_detail_bootstrap.html'
+    template_name = 'onlinecourse/course_details_bootstrap.html'
 
 
 # Enroll in course
