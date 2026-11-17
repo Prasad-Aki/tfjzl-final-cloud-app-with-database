@@ -27,8 +27,7 @@ class QuestionInline(admin.StackedInline):
 
 class QuestionAdmin(admin.ModelAdmin):
     inlines = [ChoiceInline]
-    list_display = ('content', 'course', 'grade')
-
+    list_display = ('question_text', 'course', 'grade')
 
 class LessonAdmin(admin.ModelAdmin):
     list_display = ('title', 'course', 'order')
