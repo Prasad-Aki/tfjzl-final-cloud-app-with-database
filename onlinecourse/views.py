@@ -240,6 +240,10 @@ def show_exam_result(request, course_id, submission_id):
 
     selected_choices = submission.choices.all()
 
+    selected_choice_ids = list(
+        selected_choices.values_list('id', flat=True)
+    )
+
     total_score = 0
     max_score = 0
     question_results = []
@@ -278,6 +282,7 @@ def show_exam_result(request, course_id, submission_id):
         'course': course,
         'submission': submission,
         'question_results': question_results,
+        'selected_choice_ids': selected_choice_ids,
         'total_score': total_score,
         'max_score': max_score,
         'score': score,
